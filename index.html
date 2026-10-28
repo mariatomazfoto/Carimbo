@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carimbó do CCSD</title>
+<meta name="description" content="Galeria de fotos da apresentação de Carimbó no espetáculo de 25 anos do Centro de Convivência Santa Dorotéia.">
+<meta property="og:title" content="Carimbó do CCSD">
+<meta property="og:description" content="Galeria de fotos do espetáculo. Toque em uma foto para ver e baixar.">
+<meta property="og:image" content="logo.webp">
+<meta name="robots" content="noindex">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Pacifico&family=Nunito:wght@400;600;800&display=swap">
+<style>
+:root{
+  /* Layout: girassol — bandeirinhas no topo, "Carimbó" em letra de festa, saia preta de girassóis como fundo escuro */
+  --bg:#fff9ec; --surface:#ffffff; --fg:#2b1c06; --muted:#7a6340; --line:#f1e2bf;
+  --accent:#e8710a; --accent-ink:#ffffff; --scrim:rgba(20,13,3,.96);
+  --sun:#f6b80b; --sun2:#ffd23f; --orange:#e8710a; --seed:#3b2408; --leaf:#5f8a2b;
+  --p1:#f6b80b; --p2:#e8710a; --p3:#3b2408; --p4:#ffd23f; --p5:#d9480f; --p6:#5f8a2b; --p7:#f6b80b; --p8:#e8710a; --p9:#c98a06;
+  --display:"Fredoka","Nunito",system-ui,sans-serif; --script:"Pacifico","Brush Script MT",cursive;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#120c04;--surface:#1f1608;--fg:#fff3d9;--muted:#c9ad7a;--line:#3a2a10;--accent:#f6b80b;--accent-ink:#1c1206;color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px))}
+img{max-width:100%}
+[hidden]{display:none!important}
+.flags{position:relative;max-width:1240px;margin:0 auto;height:34px;overflow:hidden;display:flex;gap:16px;padding-top:5px}
+.flags::before{content:"";position:absolute;left:0;right:0;top:4px;height:2px;background:var(--seed);opacity:.55}
+.flags i{flex:none;width:22px;height:26px;clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)}
+.wrap{max-width:1240px;margin:0 auto;padding-block:32px 64px;display:flex;flex-direction:column;gap:32px}
+header{display:flex;align-items:center;gap:clamp(18px,4vw,40px);flex-wrap:wrap}
+.logo{flex:none;width:clamp(120px,22vw,190px);background:#fff;border-radius:28px;padding:14px;box-shadow:0 10px 30px -14px rgba(60,40,110,.35)}
+.logo img{display:block;width:100%;height:auto}
+.title{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 260px}
+h1{margin:0;line-height:.9;display:flex;align-items:baseline;gap:.12em;flex-wrap:wrap}
+.n25{font-family:var(--script);font-weight:400;font-size:clamp(64px,13vw,140px);line-height:1.15;padding-bottom:.08em;
+  background:linear-gradient(100deg,var(--sun2),var(--sun) 35%,var(--orange) 75%,var(--p5));-webkit-background-clip:text;background-clip:text;color:transparent}
+.anos{font-family:var(--script);font-size:clamp(40px,7.5vw,78px)}
+.org{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(17px,2.4vw,22px)}
+.sub{margin:0;color:var(--muted)}
+.count{font-variant-numeric:tabular-nums;color:var(--fg);font-weight:800}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:8px}
+.btn{font:inherit;font-weight:800;border-radius:999px;padding:12px 22px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:focus-visible{outline:3px solid var(--p4);outline-offset:2px}
+.hint{font-size:13px;color:var(--muted);margin:0}
+details.actions{display:block}
+details.actions summary{list-style:none}
+details.actions summary::-webkit-details-marker{display:none}
+.parts{display:flex;flex-direction:column;gap:8px;margin-top:12px;max-width:420px}
+.btn.part{justify-content:space-between}
+.btn.part span{font-weight:600;color:var(--muted);font-size:13px}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1.5vw,16px);align-items:start;max-width:1000px;margin:0 auto;width:100%}
+.sec{margin:0;font-family:var(--display);font-weight:700;font-size:22px;display:flex;align-items:center;gap:12px}
+.sec::after{content:"";flex:1;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--p1),var(--p4),var(--p9),var(--p7),var(--p8),transparent)}
+.grid{columns:3 96px;column-gap:6px}
+@media (min-width:700px){.grid{columns:4 140px;column-gap:8px}}
+@media (min-width:1050px){.grid{columns:6 150px}}
+.tile{--ring:var(--p4);display:block;width:100%;margin:0 0 6px;padding:0;border:0;background:var(--line);border-radius:8px;overflow:hidden;cursor:zoom-in;break-inside:avoid;transition:box-shadow .25s}
+@media (min-width:700px){.grid .tile{margin-bottom:8px}}
+.feat .tile{margin:0;border-radius:12px}
+.tile:nth-child(9n+1){--ring:var(--p1)}.tile:nth-child(9n+2){--ring:var(--p2)}.tile:nth-child(9n+3){--ring:var(--p3)}.tile:nth-child(9n+4){--ring:var(--p4)}.tile:nth-child(9n+5){--ring:var(--p9)}.tile:nth-child(9n+6){--ring:var(--p7)}.tile:nth-child(9n+7){--ring:var(--p8)}.tile:nth-child(9n+8){--ring:var(--p5)}.tile:nth-child(9n){--ring:var(--p6)}
+.tile img{display:block;width:100%;height:auto;transition:transform .35s ease}
+.tile:hover{box-shadow:0 0 0 3px var(--ring)}
+.tile:hover img{transform:scale(1.03)}
+.tile:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
+footer{text-align:center;color:var(--muted);font-size:13px}
+.lb{position:fixed;inset:0;z-index:50;background:var(--scrim);display:flex;flex-direction:column;color:#f4f1fa;
+  padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
+.lb-n{font-variant-numeric:tabular-nums;font-size:13px;letter-spacing:.08em;opacity:.8}
+.close{background:transparent;border:0;color:#fff;font-size:32px;line-height:1;cursor:pointer;padding:4px 10px}
+.lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative;padding:0 8px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:24px;cursor:pointer}
+.nav.prev{left:12px}.nav.next{right:12px}
+@media (max-width:640px){.nav{display:none}}
+.lb-bottom{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px 16px 18px}
+.lb .btn{background:#f6b80b;border-color:#f6b80b;color:#1c1206}
+.lb .btn.ghost{background:transparent;color:#f4f1fa;border-color:rgba(255,255,255,.3)}
+.msg{font-size:13px;opacity:.85;min-height:1.2em;text-align:center;max-width:46ch;margin:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="flags" aria-hidden="true"><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i><i style="background:var(--sun)"></i><i style="background:var(--orange)"></i><i style="background:var(--seed)"></i><i style="background:var(--sun2)"></i><i style="background:var(--leaf)"></i></div>
+<main class="wrap">
+  <header>
+    <div class="logo"><img src="logo.webp" alt="Logo do Centro de Convivência Santa Dorotéia" width="440" height="492"></div>
+    <div class="title">
+      <h1><span class="n25">Carimbó</span></h1>
+      <p class="org">Festa Junina · 25 anos do Centro de Convivência Santa Dorotéia</p>
+      <p class="sub"><span class="count">41 fotos.</span> Toque em uma foto para ver em tela cheia e baixar na qualidade original.</p>
+      <details class="actions" id="all">
+        <summary class="btn primary">Baixar todas as fotos</summary>
+        <div class="parts">
+          <p class="hint">As 41 fotos (116 MB) estão divididas em 2 arquivos .zip. Baixe cada parte, de preferência no Wi‑Fi.</p>
+          <a class="btn part" href="zip/Carimbo_CCSD25_parte1.zip" download>Parte 1 <span>fotos 1–28 · 77 MB</span></a><a class="btn part" href="zip/Carimbo_CCSD25_parte2.zip" download>Parte 2 <span>fotos 29–41 · 39 MB</span></a>
+        </div>
+      </details>
+    </div>
+  </header>
+  <section class="feat" id="feat" aria-label="Fotos em destaque"></section>
+  <h2 class="sec">Mais fotos</h2>
+  <section class="grid" id="grid" aria-label="Fotos do espetáculo"></section>
+  <footer>Carimbó · 25 anos do Centro de Convivência Santa Dorotéia</footer>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <div class="lb-top"><span class="lb-n" id="lb-n"></span><button class="close" id="close" type="button" aria-label="Fechar">×</button></div>
+  <div class="lb-stage"><button class="nav prev" id="prev" type="button" aria-label="Foto anterior">‹</button><img id="lb-img" alt=""><button class="nav next" id="next" type="button" aria-label="Próxima foto">›</button></div>
+  <div class="lb-bottom">
+    <a class="btn" id="dl" href="#" download>Baixar foto</a>
+    <a class="btn ghost" id="orig" href="#" target="_blank" rel="noopener" hidden>Abrir em tamanho original</a>
+    <p class="msg" id="msg"></p>
+  </div>
+</div>
+<script>
+var P=[{"f":"IMG_2319.jpg","n":1,"w":427,"h":640,"d":1},{"f":"IMG_2339.jpg","n":2,"w":427,"h":640,"d":1},{"f":"IMG_2406.jpg","n":3,"w":427,"h":640,"d":1},{"f":"IMG_2453.jpg","n":4,"w":427,"h":640,"d":1},{"f":"IMG_2280.jpg","n":5,"w":640,"h":427,"d":0},{"f":"IMG_2298.jpg","n":6,"w":640,"h":427,"d":0},{"f":"IMG_2300.jpg","n":7,"w":640,"h":427,"d":0},{"f":"IMG_2308.jpg","n":8,"w":640,"h":427,"d":0},{"f":"IMG_2311.jpg","n":9,"w":640,"h":427,"d":0},{"f":"IMG_2315.jpg","n":10,"w":640,"h":427,"d":0},{"f":"IMG_2318.jpg","n":11,"w":640,"h":427,"d":0},{"f":"IMG_2331.jpg","n":12,"w":427,"h":640,"d":0},{"f":"IMG_2336.jpg","n":13,"w":427,"h":640,"d":0},{"f":"IMG_2337.jpg","n":14,"w":427,"h":640,"d":0},{"f":"IMG_2342.jpg","n":15,"w":640,"h":427,"d":0},{"f":"IMG_2347.jpg","n":16,"w":640,"h":427,"d":0},{"f":"IMG_2357.jpg","n":17,"w":427,"h":640,"d":0},{"f":"IMG_2369.jpg","n":18,"w":640,"h":427,"d":0},{"f":"IMG_2376.jpg","n":19,"w":640,"h":427,"d":0},{"f":"IMG_2381.jpg","n":20,"w":640,"h":427,"d":0},{"f":"IMG_2382.jpg","n":21,"w":640,"h":427,"d":0},{"f":"IMG_2385.jpg","n":22,"w":640,"h":427,"d":0},{"f":"IMG_2394.jpg","n":23,"w":427,"h":640,"d":0},{"f":"IMG_2410.jpg","n":24,"w":427,"h":640,"d":0},{"f":"IMG_2413.jpg","n":25,"w":427,"h":640,"d":0},{"f":"IMG_2414.jpg","n":26,"w":427,"h":640,"d":0},{"f":"IMG_2415.jpg","n":27,"w":427,"h":640,"d":0},{"f":"IMG_2424.jpg","n":28,"w":427,"h":640,"d":0},{"f":"IMG_2430.jpg","n":29,"w":640,"h":427,"d":0},{"f":"IMG_2442.jpg","n":30,"w":427,"h":640,"d":0},{"f":"IMG_2472.jpg","n":31,"w":640,"h":427,"d":0},{"f":"IMG_2535.jpg","n":32,"w":427,"h":640,"d":0},{"f":"IMG_2571.jpg","n":33,"w":427,"h":640,"d":0},{"f":"IMG_2574.jpg","n":34,"w":640,"h":427,"d":0},{"f":"IMG_2578.jpg","n":35,"w":640,"h":427,"d":0},{"f":"IMG_2580.jpg","n":36,"w":640,"h":427,"d":0},{"f":"IMG_3014.jpg","n":37,"w":640,"h":427,"d":0},{"f":"IMG_3017.jpg","n":38,"w":427,"h":640,"d":0},{"f":"IMG_3022.jpg","n":39,"w":427,"h":640,"d":0},{"f":"IMG_3025.jpg","n":40,"w":427,"h":640,"d":0},{"f":"IMG_3030.jpg","n":41,"w":427,"h":640,"d":0}];
+var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+var feat=document.getElementById('feat'),grid=document.getElementById('grid');
+function pad(n){return String(n).padStart(3,'0')}
+function tile(p,i){return '<button class="tile" type="button" data-i="'+i+'" aria-label="Abrir foto '+p.n+'"><img src="mini/'+pad(p.n)+'.jpg" alt="Foto '+p.n+' do espetáculo" width="'+p.w+'" height="'+p.h+'" loading="'+(p.d?'eager':'lazy')+'" decoding="async"></button>'}
+var f=[],r=[];P.forEach(function(p,i){(p.d?f:r).push(tile(p,i))});feat.innerHTML=f.join('');grid.innerHTML=r.join('');
+function onTile(e){var b=e.target.closest('.tile');if(b)open(+b.dataset.i)}
+feat.addEventListener('click',onTile);grid.addEventListener('click',onTile);
+var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),dl=document.getElementById('dl'),orig=document.getElementById('orig'),msg=document.getElementById('msg'),cur=0,blob=null,blobFor=-1;
+function open(i){lb.hidden=false;document.body.style.overflow='hidden';show(i);dl.focus()}
+function close(){lb.hidden=true;document.body.style.overflow=''}
+function show(i){cur=(i+P.length)%P.length;var p=P[cur];
+  img.src='tela/'+pad(p.n)+'.jpg';img.alt='Foto '+p.n+' do espetáculo';
+  document.getElementById('lb-n').textContent=(cur+1)+' / '+P.length;
+  dl.href='fotos/'+p.f;dl.setAttribute('download',p.f);orig.href='fotos/'+p.f;
+  orig.hidden=!isIOS;msg.textContent=isIOS?'No iPhone: toque em "Baixar foto" e escolha "Salvar imagem" para ir direto para o app Fotos.':'';
+  blob=null;blobFor=-1;
+  if(isIOS&&navigator.canShare){var want=cur;fetch('fotos/'+p.f).then(function(r){return r.blob()}).then(function(b){if(want===cur){blob=b;blobFor=want}}).catch(function(){})}
+}
+dl.addEventListener('click',function(e){
+  if(!isIOS||!navigator.canShare)return; // Android e computador: download normal
+  var p=P[cur];
+  if(blob&&blobFor===cur){
+    var file=new File([blob],p.f,{type:blob.type||'image/jpeg'});
+    if(navigator.canShare({files:[file]})){e.preventDefault();
+      navigator.share({files:[file]}).then(function(){msg.textContent='Pronto! Se escolheu "Salvar imagem", a foto está no app Fotos.'}).catch(function(err){if(err&&err.name!=='AbortError')location.href='fotos/'+p.f})}
+  }else{e.preventDefault();msg.textContent='Preparando a foto em alta qualidade… toque de novo em um instante.'}
+});
+document.getElementById('close').onclick=close;
+document.getElementById('prev').onclick=function(){show(cur-1)};
+document.getElementById('next').onclick=function(){show(cur+1)};
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(cur+1);else if(e.key==='ArrowLeft')show(cur-1)});
+var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));sx=null});
+</script>
+</body>
+</html>
