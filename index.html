@@ -101,7 +101,7 @@ footer{text-align:center;color:var(--muted);font-size:13px}
         <summary class="btn primary">Baixar todas as fotos</summary>
         <div class="parts">
           <p class="hint">As 41 fotos (116 MB) estão divididas em 2 arquivos .zip. Baixe cada parte, de preferência no Wi‑Fi.</p>
-          <a class="btn part" href="zip/Carimbo_CCSD25_parte1.zip" download>Parte 1 <span>fotos 1–28 · 77 MB</span></a><a class="btn part" href="zip/Carimbo_CCSD25_parte2.zip" download>Parte 2 <span>fotos 29–41 · 39 MB</span></a>
+          <a class="btn part" href="zip/Carimbo_CCSD25_parte1.zip" download data-goatcounter-click="carimbo/baixar-todas/parte-1" data-goatcounter-title="carimbo: baixar todas, parte 1">Parte 1 <span>fotos 1–28 · 77 MB</span></a><a class="btn part" href="zip/Carimbo_CCSD25_parte2.zip" download data-goatcounter-click="carimbo/baixar-todas/parte-2" data-goatcounter-title="carimbo: baixar todas, parte 2">Parte 2 <span>fotos 29–41 · 39 MB</span></a>
         </div>
       </details>
     </div>
@@ -140,7 +140,9 @@ function show(i){cur=(i+P.length)%P.length;var p=P[cur];
   blob=null;blobFor=-1;
   if(isIOS&&navigator.canShare){var want=cur;fetch('fotos/'+p.f).then(function(r){return r.blob()}).then(function(b){if(want===cur){blob=b;blobFor=want}}).catch(function(){})}
 }
+function track(path,title){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:path,title:title,event:true})}catch(_){}}
 dl.addEventListener('click',function(e){
+  track('carimbo/foto/'+pad(P[cur].n),'carimbo: baixou a foto '+P[cur].n+' ('+P[cur].f+')');
   if(!isIOS||!navigator.canShare)return; // Android e computador: download normal
   var p=P[cur];
   if(blob&&blobFor===cur){
@@ -156,5 +158,6 @@ document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='
 var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));sx=null});
 </script>
+<script data-goatcounter="https://mariatomazfoto.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
